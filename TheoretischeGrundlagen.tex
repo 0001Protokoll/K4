@@ -1,2 +1,85 @@
+\setlength\abovedisplayshortskip{20pt}
+\setlength\belowdisplayshortskip{20pt}
+\setlength\abovedisplayskip{20pt}
+\setlength\belowdisplayskip{20pt}
 
 \section{Theoretische Grundlagen}
+
+Als Grundlage bei dem Versuch dient die von Michaelis und Menten\cite{mmquelle} entwickelte Theorie zur Untersuchung der Enzymkinetik. Dabei wird angenommen, dass ein Enzym~E zunächst mit einem Substrat S einen Komplex ES bildet, welcher in einem zweiten Schritt zum freien Enzym und dem Produkt P zerfällt. Weiterhin sei vorausgesetzt, dass die Rückreaktion des Enzyms mit dem Produkt vernachlässigt werden kann, somit eine irreversible Reaktion vorliegt. 
+
+\begin{equation}
+\ch{\text{[E]} + \text{[S]} <=>[ $k_1$ ][ $k_{-1}$ ] \text{[ES]}->[ $k_2$ ] \text{[E]} + \text{[P]} }
+\end{equation}
+
+
+Ferner wird vorausgesetzt, dass die Enzymkonzentration [ES] in einem quasistationären Zustand vorliegen muss, sodass die Änderung dieser annähernd null ist.
+
+\begin{equation}
+\frac{\text{d[ES]}}{\text{d}t} = k_1\text{[E][S]}-\left(k_{-1} + k_2\right)\text{[ES]} \stackrel{!}{=} 0
+\label{eq:quasitation}
+\end{equation}
+
+Es ergibt sich unter Verwendung von
+
+\begin{equation}
+\text{[E]} = \text{[E]}_0-\text{[ES]}
+\end{equation}
+
+durch substituieren und umformen in Gleichung \ref{eq:quasitation}  die Michaelis-Menten Konstante $K_M$ mit
+
+\begin{equation}
+K_M=\frac{\left(\text{[E]}_0-\text{[ES]}\right)\cdot \text{[S]}}{\text{[ES]}}=\frac{\left(k_{-1} + k_2\right)}{k_1}\quad\quad\text{bzw.}\quad\quad 
+\text{[ES]}=\frac{\text{[E]}_0\cdot \text{[S]}}{K_M+\text{[S]}} \quad\text{.}
+\label{eq:MMkonstante}
+\end{equation}
+
+Damit ist es möglich für die Geschwindigkeit der Bildung des Produkts P die allgemeine Michaelis-Menten-Gleichung hinzuschreiben, welche den Reaktionsverlauf in Abhängigkeit der Substratkonzentration darstellt.
+
+\begin{equation}
+v=\frac{\text{d[P]}}{\text{d}t}=k_2\cdot\text{[ES]} =k_2\cdot \frac{\text{[E]}_0\cdot\text{[S]}}{K_M+\text{[S]}}
+\label{eq:MMfürProduktallgemein}
+\end{equation}
+
+
+Hierbei können zwei mögliche Spezialfälle unterschieden werden.
+\\
+\par
+\begingroup
+\leftskip=1cm % Parameter anpassen
+\noindent 
+1. Spezialfall: Reaktion 1. Ordnung
+\begin{equation}
+K_M \gg \text{[S]}\quad\quad\quad\quad\quad\quad \Longrightarrow \quad\quad\quad\quad v=k_2\cdot \frac{\text{[E]}_0\cdot\text{[S]}}{K_M}
+\end{equation}
+
+2. Spezialfall: Reaktion 0. Ordnung
+
+\begin{equation}
+K_M \ll \text{[S]}\quad\quad\quad\quad\quad\quad \Longrightarrow \quad\quad\quad\quad v=k_2\cdot \text{[E]}_0
+\end{equation}
+\\
+\par
+\endgroup
+Desweiteren sei erwähnt, dass bei Substratüberschuss die maximale Reaktionsgeschwindigkeit dann erreicht ist, wenn alles Enzym an Substrat gebunden vorliegt.
+\begin{equation}
+v_{max}=k_2\cdot\text{[E]}_0\quad\quad\quad \text{mit}\quad\quad\quad\text{[E]}_0=\text{[ES]}
+\label{eq:vmaxmitk2}
+\end{equation}
+Damit ergibt sich unter Verwendung der Gleichung \ref{eq:MMfürProduktallgemein} 
+am Zeitpunkt $t=0$, also dem Reaktionsbeginn 
+
+\begin{equation}
+v_0=\left(\frac{\text{d[P]}}{\text{d}t}\right)_{t=0}=k_2\cdot \frac{\text{[E]}_0\cdot\text{[S]}_0}{K_M+\text{[S]}_0}
+\label{eq:MMfürProduktbeinull}
+\end{equation}
+ folgende Beziehung
+\begin{equation}
+v_0=v_{max}\cdot \frac{\text{[S]}_0}{K_M+\text{[S]}_0}\quad\text{.}
+\end{equation}
+
+Nach Bildung des Kehrwertes erschließt sich so der mathematische Zusammenhang, welcher der graphischen Auftragung des Lineweaver-Burk-Plots zugrunde liegt.
+
+\begin{equation}
+\frac{1}{v_{0}}=\frac{1}{v_{max}}+\frac{K_M}{v_{max}}\cdot \frac{1}{\text{[S]}_0}
+\label{eq:lineweaverPlot}
+\end{equation}

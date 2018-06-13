@@ -21,7 +21,7 @@ Sei : \\
 \begin{figure}[H]
 	\centering	
 	\begin{minipage}{1\textwidth}
-		\includegraphics[width=\columnwidth]{\Bilder\Kalibierung.pdf}
+		\includegraphics[width=\columnwidth]{Bilder/Kalibierung.pdf}
 	\end{minipage}
 	\caption{Eichgerade mithilfe der lineare Regression der Kalibrierungsreihe durch eine Routine in der Programmiersprache \textit{python}. Fehlerbalken resultieren aus Messungenauigkeit sowie Abmessungsfehler sowie dem Fehler des Verfahrens.}
 	\label{Eichgerade}
@@ -30,12 +30,12 @@ Im folgenden Schritt wurden die neun durchgeführten Messreihen in einer Abbildu
 \begin{figure}[H]
 	\centering	
 	\begin{minipage}{1\textwidth}
-		\includegraphics[width=\columnwidth]{\Bilder\Messreihe.pdf}
+		\includegraphics[width=\columnwidth]{Bilder/Messreihe.pdf}
 	\end{minipage}
 	\caption{Auftragung der neun durchgeführte Messreihen der Konzentration über der Zeit. Die Ausgleichsgeraden im Bereich der ersten fünf Messpunkte wurde durch eine lineare Regression in der Programmiersprache \textit{python} erzeugt, ferner die Steigung dieser Geraden ermittelt sowie dessen Fehler.}
 	\label{Messreihe}
 \end{figure}
-Wichtig ist hier, dass die betreffenden Steigungen sich auf die Konzentrationszunahme der gemessenen Leitfähigkeit, also der Ammoniumcarbonatkonzentration bezieht. Unter der Näherung, dass gemäß Abbildung xyz gerade der antiproportionalen Abnahme entspricht, ist die bestimmte Steigung gerade die gesuchte reziproke Anfangsgeschwindigkeit. Die erhaltenen Steigungen bezogen auf die verwendete Verdünnung sowie der zugehörigen Fehler wurden in folgender Tabelle in signifikanten Stellen angegeben.
+Wichtig ist hier, dass die betreffenden Steigungen sich auf die Konzentrationszunahme der gemessenen Leitfähigkeit, also der Ammoniumcarbonatkonzentration bezieht. Die erhaltenen Steigungen bezogen auf die verwendete Verdünnung sowie der zugehörigen Fehler wurden in folgender Tabelle in signifikanten Stellen angegeben.
 \begin{table}[H]
 \centering
 \label{Steigungstabelle}
@@ -54,11 +54,11 @@ Wichtig ist hier, dass die betreffenden Steigungen sich auf die Konzentrationszu
 		$9$ &  $2.697$& $\pm 0.099$ &1\\
 	\end{tabular}
 \end{table}
-Mithilfe dieser wurde ein \textit{Lineweaver-Burk-Plot} angefertigt um die gesuchten Größen $v_{max}\, , \, K_M\, ,\, k_2$ aus den bestimmten Steigungen, also Anfangsgeschwindigkeiten $v_0$, zu bestimmen. Hierfür wurde insbesondere Gleichung xyz verwendet, sowie die Annahme eines linearen Verlaufs, also formal einer Reaktionsordnung Null, für die ersten Messwerte einer jeden gezeigten Messreihe in Abbildung \ref{Messreihe}. Die ermittelten Anfangsgeschwindigkeit wurden über die zugehörige Konzentration des Harnstoffs in einem reziproken Raum aufgetragen.
+Mithilfe dieser wurde ein \textit{Lineweaver-Burk-Plot} angefertigt um die gesuchten Größen $v_{max}\, , \, K_M\, ,\, k_2$ aus den bestimmten Steigungen, also Anfangsgeschwindigkeiten $v_0$, zu bestimmen. Hierfür wurde insbesondere Gleichung \ref{eq:Grenzfall} verwendet, also die Annahme eines linearen Verlaufs der somit formalen Reaktion nullter Ordnung, für die ersten Messwerte einer jeden gezeigten Messreihe in Abbildung \ref{Messreihe}. Die ermittelten Anfangsgeschwindigkeit wurden über die zugehörige Konzentration des Harnstoffs in einem reziproken Raum aufgetragen.
 \begin{figure}[H]
 	\centering	
 	\begin{minipage}{1\textwidth}
-		\includegraphics[width=\columnwidth]{\Bilder\Lineweaver.pdf}
+		\includegraphics[width=\columnwidth]{Bilder/Lineweaver.pdf}
 	\end{minipage}
 	\caption{Auftragung der neun reziproken Wertepaare als Anfangsgeschwindigkeit über Konzentration. Die Fehler resultieren bezogen auf die Y-Achse aus den Fehlern der Steigungen und in der X-Achse aus der Messungenauigkeit von $2\%$. Die Ausgleichsgerade wurde durch eine lineare Regression über alle Punkte in der Programmiersprache \textit{python} erzeugt. Der Fehler bezieht sich neben dem Fehler des Verfahrens ebenfalls auf zuvor angesprochene fehlerbehaftete Größen.}
 	\label{Lineweaver}
@@ -68,7 +68,7 @@ Die Geradengleichung ergibt sich also in fehlerfreier Darstellung wie folgt :
 g(x) = 0.2733 x + 342.229
 \label{Geradengleichung}
 \end{equation}
-Gemäß Gleichung xyz lässt sich hierdurch $\frac{1}{v_{max}}$ als Y-Achsenabschnitt (als $n$) sowie ferner $\frac{K_M}{v_{max}}$ als Steigung (als :$(m)$) bestimmen. Die Fehler resultieren aus den Fehlern der Regression.\\
+Gemäß Gleichung \ref{eq:lineweaverPlot} lässt sich hierdurch $\frac{1}{v_{max}}$ als Y-Achsenabschnitt (als $n$) sowie ferner $\frac{K_M}{v_{max}}$ als Steigung (als :$(m)$) bestimmen. Die Fehler resultieren aus den Fehlern der Regression.\\
 \begin{equation}
 v_{max} = \frac{1}{n} = \frac{1}{342.229} \approx 2.92\cdot 10^{-3} \quad \left[\si{\frac{mol}{L\cdot s}}\right]
 \end{equation}
@@ -79,7 +79,7 @@ Es ergibt sich somit :
 \begin{equation}
 v_{max} = (2.92 \pm 0.03 )\cdot 10^{-3}  \quad \left[\si{\frac{mol}{L\cdot s}}\right]
 \end{equation}\\
-Die Michaelis Menten Konstante ergibt sich gemäß Gleichung xyz als Produkt der Steigung und des zuvor bestimmten $v_{max}$. Betrachte ferner für die Einheitenberechnung, dass die Steigung in $  [\si{s}]$, da $ [\si{\frac{mol}{L}\cdot \frac{L\cdot s}{mol} = s}]$: 
+Die Michaelis Menten Konstante ergibt sich als Produkt der Steigung und des zuvor bestimmten $v_{max}$. Betrachte ferner für die Einheitenberechnung, dass die Steigung in $  [\si{s}]$, da $ [\si{\frac{mol}{L}\cdot \frac{L\cdot s}{mol} = s}]$: 
 \begin{equation}
 K_M = v_{max} \cdot m = 2.92 \cdot 10^{-3} \, \si{\frac{mol}{L\cdot s}}\,\, \cdot \,\,0.2733  \,\si{s} \approx 8.097 \cdot 10^{-4} \, [\si{\frac{mol}{L}}]
 \end{equation}\\
@@ -91,13 +91,14 @@ Der Wert der Michaelis Menten Konstante ist also :
 \begin{equation}
 K_M = (8.097 \pm 0.009) \cdot 10^{-4} \,[\si{\frac{mol}{L}}]
 \end{equation}
-Die Übergangskonstante $k_2$ kann durch Gleichung xyz. und unter Nutzung der Konzentration der verwendeten Urease bestimmt werden. Die Konzentration der Urease wurde mit einer Messungenauigkeit von $10\%$, basierend des  Einwiegens, gegeben als :
+Die Übergangskonstante $k_2$ kann unter Nutzung der Konzentration der verwendeten Urease bestimmt werden. Die Konzentration der Urease wurde mit einer Messungenauigkeit von $10\%$, basierend des  Einwiegens, gegeben als :
 \begin{equation}
 [Urease]_0 = \frac{m}{M}\cdot \frac{1}{V} =  (1.85 \pm 0.19)\cdot 10^{-6} \,\left[\si{\frac{mol}{L}}\right]
 \end{equation} 
 bestimmt. Im Anschluss ergibt sich $k_2$ als : 
 \begin{equation}
 k_2 = \frac{[Urease]_0}{v_{max}} = \frac{1.85 \cdot 10^{-6} \, \si{\frac{mol}{L}}}{2.92\cdot 10^{-3}\, \si{\frac{mol}{L\cdot s}}} \approx 6.34 \cdot 10^{-4} \, \left[\si{\frac{1}{s}}\right]
+\label{eq:k2}
 \end{equation}
 \\
 Sowie dessen Fehler : 

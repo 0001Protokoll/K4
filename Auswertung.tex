@@ -8,14 +8,14 @@
 Um eine Relation zwischen Leitfähigkeit und Konzentration des Produktes zu erhalten, wurde eine Eichgerade durch die lineare Regression der Kalibrierungsmessreihe bestimmt (vgl. Abbildung \ref{Eichgerade}). Ferner wurde die Konzentration der Urease im Prozess als Konstant angenommen ($ 78\,[\si{\mu S/cm}]$) und von jeder Messung subtrahiert, um aus der vorliegenden Leitfähigkeit die Produktkonzentration gemäß folgender Gleichung abzuleiten : \\
 \\
 Sei : \\
- $c[P]_M$ die Konzentration des Produktes in einer Messung\\
+ $[$P$]_M$ die Konzentration des Produktes in einer Messung\\
  $\sigma_M$ die gemessene Leitfähigkeit in $[\si{\mu S/cm}]$\\
   $\sigma_U$ die konstante Leitfähigkeit der Urease bei gegebener Verdünnung \\
   $f()$ die Eichfunktion, die eine Leitfähigkeit in die Produktkonzentration abbildet.\\
   \\
   Es gilt :
 \begin{equation}
-c[P]  \sim \sigma_M \quad| \quad c[P]=f(\sigma_M-\sigma_U)
+[\text{P}]  \sim \sigma_M \quad| \quad [\text{P}]=f(\sigma_M-\sigma_U)
 \label{Eichgleichung}
 \end{equation}
 \begin{figure}[H]
@@ -27,7 +27,6 @@ c[P]  \sim \sigma_M \quad| \quad c[P]=f(\sigma_M-\sigma_U)
 	\label{Eichgerade}
 \end{figure}
 Im folgenden Schritt wurden die neun durchgeführten Messreihen in einer Abbildung als zeitliche Messung der Konzentration aufgetragen. Insbesondere wurde hierfür Gleichung \ref{Eichgleichung} verwendet um aus der eigentlich gemessene Leitfähigkeit die Konzentration zu bestimmen. Der Fehler ergibt sich hier als Fehler des Verfahrens sowie als Fehler basierend auf der fehlerbehaftete Eichfunktion.
-\newpage
 \begin{figure}[H]
 	\centering	
 	\begin{minipage}{1\textwidth}
@@ -36,23 +35,23 @@ Im folgenden Schritt wurden die neun durchgeführten Messreihen in einer Abbildu
 	\caption{Auftragung der neun durchgeführte Messreihen der Konzentration über der Zeit. Die Ausgleichsgeraden im Bereich der ersten fünf Messpunkte wurde durch eine lineare Regression in der Programmiersprache \textit{python} erzeugt, ferner die Steigung dieser Geraden ermittelt sowie dessen Fehler.}
 	\label{Messreihe}
 \end{figure}
-Wichtig ist hier, dass die betreffenden Steigungen sich auf die Konzentrationszunahme der gemessenen Leitfähigkeit $\sim $Ammoniumcarbonatkonzentration bezieht. Unter der Näherung, dass gemäß Abbildung xyz gerade der antiproportionalen Abnahme entspricht, ist die bestimmte Steigung gerade die gesuchte reziproke Anfangsgeschwindigkeit. Die erhaltenen Steigungen bezogen auf die verwendete Verdünnung sowie der zugehörigen Fehler wurden in folgender Tabelle in signifikanten Stellen angegeben.
+Wichtig ist hier, dass die betreffenden Steigungen sich auf die Konzentrationszunahme der gemessenen Leitfähigkeit, also der Ammoniumcarbonatkonzentration bezieht. Unter der Näherung, dass gemäß Abbildung xyz gerade der antiproportionalen Abnahme entspricht, ist die bestimmte Steigung gerade die gesuchte reziproke Anfangsgeschwindigkeit. Die erhaltenen Steigungen bezogen auf die verwendete Verdünnung sowie der zugehörigen Fehler wurden in folgender Tabelle in signifikanten Stellen angegeben.
 \begin{table}[H]
 \centering
 \label{Steigungstabelle}
 	\caption{Steigungen der Ausgleichsgraden, welche durch eine lineare Regression der ersten fünf Messwerte erhalten wurden. Die lineare Regression erfolte über eine Routine in \textit{python}}
-	\begin{tabular}{C{0.15\linewidth}|C{0.1\linewidth}C{0.25\linewidth}C{0.3\linewidth}}
-		Messreihe  &  Steigung $[\si{\frac{s\cdot mol}{L}] \cdot 10^{-3}}$ &  Absoluter Fehler $[\si{\frac{s \cdot mol}{L}] \cdot 10^{-3}}$ & Konzentration Harnstoff $\si{[mol/L]}\cdot 10^{-2}$ \\
+	\begin{tabular}{C{0.15\linewidth}|C{0.15\linewidth}C{0.25\linewidth}C{0.3\linewidth}}
+		Messreihe  &  Steigung $\left[\si{\frac{s\cdot mol}{L}}\right] \cdot 10^{-3}$ &  Absoluter Fehler $\left[\si{\frac{s \cdot mol}{L}}\right] \cdot 10^{-3}$ & Konzentration Harnstoff $\left[\si{mol/L}\right]\cdot 10^{-2}$ \\
 		\hline \addlinespace[1ex] 
-		$ 1$ & $1.120$ & $\pm 0.25$ & 0.05\\
-		$2$ & $1.684$& $ \pm 0.89$ &0.10\\
-		$3$ & $1.856$& $\pm 0.98$ &0.15\\
-		$4$ &$2.061$& $\pm 0.95$&0.2\\
-		$5$&  $2.248$&  $\pm 0.82$ &0.3\\
-		$6$&  $2.490$&  $\pm 0.82$&0.4\\
-		$7$ &  $2.619$&$\pm 0.66$&0.6\\
-		$8$ & $2.664$&$\pm  0.82$ &0.8\\
-		$9$ &  $2.697$& $\pm 0.99$ &1\\
+		$ 1$ & $1.120$ & $\pm 0.025$ & 0.05\\
+		$2$ & $1.684$& $ \pm 0.089$ &0.10\\
+		$3$ & $1.856$& $\pm 0.098$ &0.15\\
+		$4$ &$2.061$& $\pm 0.095$&0.2\\
+		$5$&  $2.248$&  $\pm 0.082$ &0.3\\
+		$6$&  $2.490$&  $\pm 0.082$&0.4\\
+		$7$ &  $2.619$&$\pm 0.066$&0.6\\
+		$8$ & $2.664$&$\pm  0.082$ &0.8\\
+		$9$ &  $2.697$& $\pm 0.099$ &1\\
 	\end{tabular}
 \end{table}
 Mithilfe dieser wurde ein \textit{Lineweaver-Burk-Plot} angefertigt um die gesuchten Größen $v_{max}\, , \, K_M\, ,\, k_2$ aus den bestimmten Steigungen, also Anfangsgeschwindigkeiten $v_0$, zu bestimmen. Hierfür wurde insbesondere Gleichung xyz verwendet, sowie die Annahme eines linearen Verlaufs, also formal einer Reaktionsordnung Null, für die ersten Messwerte einer jeden gezeigten Messreihe in Abbildung \ref{Messreihe}. Die ermittelten Anfangsgeschwindigkeit wurden über die zugehörige Konzentration des Harnstoffs in einem reziproken Raum aufgetragen.
@@ -68,52 +67,49 @@ Die Geradengleichung ergibt sich also in fehlerfreier Darstellung wie folgt :
 \begin{equation}
 g(x) = 0.2733 x + 342.229
 \label{Geradengleichung}
-\end{equation}\\
+\end{equation}
 Gemäß Gleichung xyz lässt sich hierdurch $\frac{1}{v_{max}}$ als Y-Achsenabschnitt (als $n$) sowie ferner $\frac{K_M}{v_{max}}$ als Steigung (als :$(m)$) bestimmen. Die Fehler resultieren aus den Fehlern der Regression.\\
-\\
 \begin{equation}
-v_{max} = \frac{1}{n} = \frac{1}{342.229} \approx 2.92\cdot 10^{-3} \quad [\si{\frac{mol}{L\cdot s}}]
+v_{max} = \frac{1}{n} = \frac{1}{342.229} \approx 2.92\cdot 10^{-3} \quad \left[\si{\frac{mol}{L\cdot s}}\right]
 \end{equation}
-\\
 \begin{equation}
-\Delta v_{max} = |\frac{\partial v_{max}}{\partial n}|\Delta n = |-\frac{1}{n^2}|\Delta n \approx \pm 0.03  \quad [\si{\frac{mol}{L\cdot s}}]
+\Delta v_{max} = |\frac{\partial v_{max}}{\partial n}|\Delta n = |-\frac{1}{n^2}|\Delta n \approx \pm 0.03  \quad \left[\si{\frac{mol}{L\cdot s}}\right]
 \end{equation}
-\\
 Es ergibt sich somit : 
 \begin{equation}
-v_{max} = (2.92 \pm 0.03 )\cdot 10^{-3}  \quad [\si{\frac{mol}{L\cdot s}}]
+v_{max} = (2.92 \pm 0.03 )\cdot 10^{-3}  \quad \left[\si{\frac{mol}{L\cdot s}}\right]
 \end{equation}\\
-Die Michael Menden Konstante ergibt sich gemäß Gleichung xyz als Produkt der Steigung und des zuvor bestimmten $v_{max}$. Betrachte ferner für die Einheitenberechnung, dass die Steigung in $  [\si{s}]$, da $ [\si{\frac{mol}{L}\cdot \frac{L\cdot s}{mol} = s}]$: 
+Die Michaelis Menten Konstante ergibt sich gemäß Gleichung xyz als Produkt der Steigung und des zuvor bestimmten $v_{max}$. Betrachte ferner für die Einheitenberechnung, dass die Steigung in $  [\si{s}]$, da $ [\si{\frac{mol}{L}\cdot \frac{L\cdot s}{mol} = s}]$: 
 \begin{equation}
 K_M = v_{max} \cdot m = 2.92 \cdot 10^{-3} \, \si{\frac{mol}{L\cdot s}}\,\, \cdot \,\,0.2733  \,\si{s} \approx 8.097 \cdot 10^{-4} \, [\si{\frac{mol}{L}}]
 \end{equation}\\
 Der Fehler resultiert analog als Summe der partiellen Ableitungen gemäße : 
 \begin{equation}
 \Delta K_M = |\frac{\partial K_M}{\partial v_{max}}|\Delta v_{max} + |\frac{\partial K_M}{\partial m}|\Delta m  = m \Delta v_{max} + v_{max}\Delta m \approx 8.93 \cdot 10^{-7} \,[\si{\frac{mol}{L}}]
-\end{equation}\\
-Der Wert der Michael Menden Konstante ist also : 
+\end{equation}
+Der Wert der Michaelis Menten Konstante ist also : 
 \begin{equation}
 K_M = (8.097 \pm 0.009) \cdot 10^{-4} \,[\si{\frac{mol}{L}}]
-\end{equation}\\
-Zur Bestimmung der Übergangskonstante $k_2$ kann durch Gleichung xyz. und unter Nutzung der Konzentration der verwendeten Urease. Diese wurde mit einer Messungenauigkeit von $10\%$, basierend des  einwiegens, auf :
+\end{equation}
+Die Übergangskonstante $k_2$ kann durch Gleichung xyz. und unter Nutzung der Konzentration der verwendeten Urease bestimmt werden. Die Konzentration der Urease wurde mit einer Messungenauigkeit von $10\%$, basierend des  Einwiegens, gegeben als :
 \begin{equation}
-[Urease]_0 = \frac{m}{M}\cdot \frac{1}{V} =  (1.85 \pm 0.19)\cdot 10^{-6} \,[\si{\frac{mol}{L}}]
-\end{equation} \\
+[Urease]_0 = \frac{m}{M}\cdot \frac{1}{V} =  (1.85 \pm 0.19)\cdot 10^{-6} \,\left[\si{\frac{mol}{L}}\right]
+\end{equation} 
 bestimmt. Im Anschluss ergibt sich $k_2$ als : 
 \begin{equation}
-k_2 = \frac{[Urease]_0}{v_{max}} = \frac{1.85 \cdot 10^{-6} \, \si{\frac{mol}{L}}}{2.92\cdot 10^{-3}\, \si{\frac{mol}{L\cdot s}}} \approx 6.34 \cdot 10^{-4} \, [\si{\frac{1}{s}}]
+k_2 = \frac{[Urease]_0}{v_{max}} = \frac{1.85 \cdot 10^{-6} \, \si{\frac{mol}{L}}}{2.92\cdot 10^{-3}\, \si{\frac{mol}{L\cdot s}}} \approx 6.34 \cdot 10^{-4} \, \left[\si{\frac{1}{s}}\right]
 \end{equation}
 \\
 Sowie dessen Fehler : 
 \begin{equation}
-\Delta k_2 = |\frac{\partial k_2}{\partial v_{max}}|\Delta v_{max} + |\frac{\partial k_2}{\partial [Urease]_0}|\Delta [Urease]_0  = ...
+\Delta k_2 = \left|\frac{\partial k_2}{\partial v_{max}}\right|\Delta v_{max} + \left|\frac{\partial k_2}{\partial [Urease]_0}\right|\Delta [Urease]_0  = ...
 \end{equation}
 \begin{equation*}
-... |-\frac{[Urease]_0}{v_{max}^2}|\Delta v_{max} + |\frac{1}{v_{max}}|\Delta [Urease]_0 \approx 6.57 \cdot 10^{-6} \,[\si{\frac{1}{s}}]
+... \left|-\frac{[Urease]_0}{v_{max}^2}\right| \Delta v_{max} + \left|\frac{1}{v_{max}}\right|\Delta [Urease]_0 \approx 6.57 \cdot 10^{-6} \,\left[\si{\frac{1}{s}}\right]
 \end{equation*}
 \\
 Die Übergangskonstante $k_2$ lautet somit : 
 \begin{equation}
-k_2 = (6.34 \pm 0.07)\cdot 10^{-4}\,[\si{\frac{1}{s}}]
+k_2 = (6.34 \pm 0.07)\cdot 10^{-4}\,\left[\si{\frac{1}{s}}\right]
 \end{equation}
 %\end{document}

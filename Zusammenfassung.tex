@@ -1,7 +1,7 @@
-\input{usepackage.tex} 
-\begin{document}
+%\input{usepackage.tex} 
+%\begin{document}
 \section{Zusammenfassung}
-Zu untersuchen war in den getätigten Versuch die enzymkatalysierte Zersetzung von Harnstoff in Ammoniumcarbonat. Insbesondere sollten Eigenschaften der Reaktionskinetik über die Michael Menden Theorie studiert werden. Die Ergbenisse als $v_{max}$ enstprechend der maximalen Reaktionsgeschwindigkeit , $k_2$ als Übergangskonstante des zweiten, nicht gleichgewichts Schritt der Reaktion sowie $K_M$ als Micheal Menden Konstante, wurden in folgender Tabelle dargstellt :
+Zu untersuchen war in den getätigten Versuch die enzymkatalysierte Zersetzung von Harnstoff in Ammoniumcarbonat. Insbesondere sollten Eigenschaften der Reaktionskinetik über die Michaelis Menten Theorie studiert werden. Die Ergbenisse als $v_{max}$ enstprechend der maximalen Reaktionsgeschwindigkeit , $k_2$ als Übergangskonstante des zweiten irreversiblen Schritt der Reaktion sowie $K_M$ als Michealis Menten Konstante, wurden in folgender Tabelle dargstellt :
 \begin{table}[H]
 	\centering
 	\label{Erg}
@@ -10,12 +10,12 @@ Zu untersuchen war in den getätigten Versuch die enzymkatalysierte Zersetzung v
 	\begin{tabular}{C{0.1\linewidth}|C{0.25\linewidth}C{0.25\linewidth}}
 				& experimenteller Wert & Literatur\cite{otto} \\
 		$ v_{max}\,\, [\si{\frac{mol}{L\cdot s}}] $ & $(2.92 \pm 0.03) \cdot 10^{-3}$ &   \\
-		$k_2\,\,\,\,\,\,\,\, [\si{\frac{1}{s}}]$ & $(6.34 \pm 0.07)\cdot 10^{-7}$ &  $25 \cdot 10^3$\\
+		$k_2\,\,\,\,\,\,\,\, [\si{\frac{1}{s}}]$ & $(1.58 \pm 0.16)\cdot 10^{3}$ &  $25 \cdot 10^3$\\
 		$K_M\,\, [\si{\frac{mol}{L}}]$& $(8.08 \pm 0.01) \cdot 10^{-4}$& $2 \cdot 10^{-4}$\\
 	\end{tabular}
 \end{table}
-Weder die Michaelis Menten Konstante, noch die Übergangskonstante sind verträglich mit den Literaturwerten. Insbesondere ist die Abweigung der Größenordnung der experimentell bestimmten Übergangskonstante $k_2$ auffällig. Da $k_2$ direkt Proportional zu der Konzentration der Urease ist, sowie antiproportional zu der maximalen Reaktionsgeschwindigkeit gemäß Gleichung \ref{eq:k2} kann durch diesen Zusammenhang die große Abweichung untersucht werden. Nehmen wir an, dass die Konzentration der Urease nicht stark fehlerbehaftet war -- somit begründet sich der Fehler von $k_2$ besonders durch $\frac{1}{v_{max}}$. Ferner ist $\frac{1}{v_{max}} = n$ gemäß Gleichung \ref{eq:lineweaverPlot}. Es folgt also, dass der Y-Achsenabschnitt, berechnet durch die lineare Regression, einen zu hohen Wert angenommen hat. Dies liegt genau dann vor, wenn die reziproken Anfangsgeschwindigkeiten gerade Werte um den Y-Achsenabschnitt annehmen, sowie die Steigung verhältnismäßig gering ist. Zurück zum Experiment heißt dies also, dass die linearen Regressionen der durchgeführten Messreihen in Abbildung \ref{Messreihe}, zum einen eine zu ähnliche Steigung und zum anderen eine zu steile Steigung besitzen. Dies ist der Fall, wenn sich die Produktkonzentration nicht signifikant ändern, oder wenn bereits zu Beginn der Messung eine signifikante Menge an Produkt vorlag. Es ist also zu vermuten, dass der vorliegende Fehler zum Beispiel durch eine zu hohe Restkonzentration von Ammoniumcarbonat in den verwendeten Reagenzgläsern bzw. Messgeräten zu begründen ist. Ebenfalls kann der Fehler durch Temperaturschwankungen resultieren, da diese an dem Versuchstag bedingt durch hohe Außentemperaturen besonders realistisch sind.
+Weder die Michaelis Menten Konstante, noch die Maximalgeschwindigkeit sind verträglich mit den Literaturwerten. Insbesondere ist die Abweigung des experimentell bestimmten Wechselzahl $k_2$ auffällig. Da $k_2$ direkt Proportional zu der Konzentration der Urease ist, sowie antiproportional zu der maximalen Reaktionsgeschwindigkeit gemäß Gleichung \ref{eq:k2} kann durch diesen Zusammenhang die Abweichung untersucht werden. Nehmen wir an, dass die Konzentration der Urease nicht stark fehlerbehaftet war, somit begründet sich der Fehler von $k_2$ besonders durch $\frac{1}{v_{max}}$. Ferner ist $\frac{1}{v_{max}} = n$ gerade der \textit{offset} gemäß Gleichung \ref{eq:lineweaverPlot}. Es folgt also, dass der Y-Achsenabschnitt, berechnet durch die lineare Regression, einen zu hohen Wert angenommen hat. Dies liegt genau dann vor, wenn die reziproken Anfangsgeschwindigkeiten gerade Werte um den Y-Achsenabschnitt annehmen, sowie die Steigung verhältnismäßig gering ist. Zurück zum Experiment heißt dies also, dass die linearen Regressionen der durchgeführten Messreihen in Abbildung \ref{Messreihe}, zum einen eine zu ähnliche Steigung und zum anderen eine zu steile Steigung besitzen. Dies kann daran liegen, dass wir von einem idealen System ausgehen, also von einer Reinheit von 100\% des verwendeten Harnstoffes sowie der Urease ausgehen. Ebenfalls gehen wir davon aus, dass die Urease sich nicht durch äußere Einflüsse zersetzt hat. 
 
-\end{document}
+%\end{document}
 
 

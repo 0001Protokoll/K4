@@ -56,3 +56,7 @@
 \usepackage{chemformula}
 
 
+\usepackage[backend=bibtex, style=chem-angew, backref=none, backrefstyle=all+]{biblatex}
+\bibliography{Literatur.bib}
+\defbibheading{head}{\section{Literatur}\label{sec:Lit}} 
+\let\cite=\supercite

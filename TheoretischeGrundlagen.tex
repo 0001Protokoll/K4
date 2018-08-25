@@ -12,7 +12,7 @@ Als Grundlage bei dem Versuch dient die von Michaelis und Menten entwickelte The
 \end{equation}
 
 
-Ferner wird vorausgesetzt, dass die Enzymkonzentration [ES] in einem quasistationären Zustand vorliegen muss, sodass die Änderung dieser annähernd null ist.
+Ferner wird vorausgesetzt, dass die Konzentration des ES-Komplexes [ES] in einem quasistationären Zustand vorliegen muss, sodass die zeitliche Änderung dieser annähernd null ist.
 
 \begin{equation}
 \frac{\text{d[ES]}}{\text{d}t} = k_1\text{[E][S]}-\left(k_{-1} + k_2\right)\text{[ES]} \stackrel{!}{=} 0
@@ -47,12 +47,12 @@ Hierbei können zwei mögliche Spezialfälle unterschieden werden.
 \begingroup
 \leftskip=1cm % Parameter anpassen
 \noindent 
-1. Spezialfall: Reaktion 1. Ordnung
+1. Spezialfall: Reaktion 1. Ordnung bezüglich $\text{[S]}$
 \begin{equation}
 K_M \gg \text{[S]}\quad\quad\quad\quad\quad\quad \Longrightarrow \quad\quad\quad\quad v=k_2\cdot \frac{\text{[E]}_0\cdot\text{[S]}}{K_M}
 \end{equation}
 
-2. Spezialfall: Reaktion 0. Ordnung
+2. Spezialfall: Reaktion 0. Ordnung bezüglich $\text{[S]}$
 
 \begin{equation}
 K_M \ll \text{[S]}\quad\quad\quad\quad\quad\quad \Longrightarrow \quad\quad\quad\quad v=k_2\cdot \text{[E]}_0
@@ -70,17 +70,17 @@ Damit ergibt sich unter Verwendung der Gleichung \ref{eq:MMfürProduktallgemein}
 am Zeitpunkt $t=0$, also dem Reaktionsbeginn 
 
 \begin{equation}
-v_0=\left(\frac{\text{d[P]}}{\text{d}t}\right)_{t=0}=k_2\cdot \frac{\text{[E]}_0\cdot\text{[S]}_0}{K_M+\text{[S]}_0}
+v_0=\left(\frac{\text{d[P]}}{\text{d}t}\right)_{t=0}=k_2\cdot \frac{\text{[E]}_0\cdot\text{[S]}}{K_M+\text{[S]}}
 \label{eq:MMfürProduktbeinull}
 \end{equation}
  folgende Beziehung
 \begin{equation}
-v_0=v_{max}\cdot \frac{\text{[S]}_0}{K_M+\text{[S]}_0}\quad\text{.}
+v_0=v_{max}\cdot \frac{\text{[S]}}{K_M+\text{[S]}}\quad\text{.}
 \end{equation}
 
 Nach Bildung des Kehrwertes erschließt sich so der mathematische Zusammenhang, welcher der graphischen Auftragung des Lineweaver-Burk-Plots zugrunde liegt.
 
 \begin{equation}
-\frac{1}{v_{0}}=\frac{1}{v_{max}}+\frac{K_M}{v_{max}}\cdot \frac{1}{\text{[S]}_0}
+\frac{1}{v_{0}}=\frac{1}{v_{max}}+\frac{K_M}{v_{max}}\cdot \frac{1}{\text{[S]}}
 \label{eq:lineweaverPlot}
 \end{equation}
